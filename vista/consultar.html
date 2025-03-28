@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Transito</title>
+<link rel="StyleSheet" href="estilo.css" type="text/css">
+</head>
+<body>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.4.8/p5.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.4.8/addons/p5.dom.js"></script>
+<script src="script.js"></script>
+<style>
+
+</style>
+
+<nav  id="navbar">
+    <img id="logo" src="alcaldia de medellin.png" alt="alcaldia de medellin">
+    <div id="contendorInicio">
+    <h1>CONSULTA DE INFORMACIÓN TRANSITO</h1>
+    </div>
+    
+    <ul id=menu>
+        <li><a href=inicio.html>Inicio</a></li>
+        <li><a href=registrar.html>Registrar</a></li>
+        <li><a href=actualizar.html>Actualizar</a></li>
+        <li><a href=borrar.html>Borrar</a></li>
+    </ul>
+</nav>
+
+
+<div id="contenedorform">
+<form method="post" action="#">
+<h1>Consultar información de usuario</h1>
+
+<label>Identificación:</label>
+<input type="number" name="ident" id="idConsulta" size="20">
+<br>
+<br>
+
+
+<button type="button" id="btnConsultar" onclick="getConsultar();">Consultar</button> 
+</form>
+</div>
+
+<div id="contenedorform">
+    <form method="post" action="#">
+    <h1>Consultar información de vehiculo</h1>
+    
+    <label>Placa:</label>
+    <input type="text" name="ident" id="idConsulta2" size="20">
+    <br>
+    <br>
+    
+    
+    <button type="button" id="btnConsultar2" onclick="getConsultar2();">Consultar</button> 
+    </form>
+    </div>
+
+
+    <div id="contenedorform">
+        <form method="post" action="#">
+        <h1>Consultar información de infraccion</h1>
+        
+        <label>Numero de infracción:</label>
+        <input type="number" name="ident" id="idConsulta3" size="20">
+        <br>
+        <br>
+        
+        
+        <button type="button" id="btnConsultar3" onclick="getConsultar3();">Consultar</button> 
+        </form>
+        </div>
+
+
+
+
+
+</body>
+</html>

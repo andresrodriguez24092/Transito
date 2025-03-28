@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Transito</title>
+<link rel="StyleSheet" href="estilo.css" type="text/css">
+</head>
+<body>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.4.8/p5.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.4.8/addons/p5.dom.js"></script>
+<script src="script.js"></script>
+<style>
+
+</style>
+
+<nav  id="navbar">
+    <img id="logo" src="alcaldia de medellin.png" alt="alcaldia de medellin">
+    <div id="contendorInicio">
+    <h1>ELIMINACION DE INFORMACIÓN TRANSITO</h1>
+    </div>
+    
+    <ul id=menu>
+        <li><a href=inicio.html>Inicio</a></li>
+        <li><a href=registrar.html>Registrar</a></li>
+        <li><a href=consultar.html>Consultar</a></li>
+        <li><a href=actualizar.html>Actualizar</a></li>
+    </ul>
+</nav>
+
+
+<div id="contenedorform2">
+<form method="post" action="#">
+<h1>Borrar Vehiculo</h1>
+<label>Placa:</label>
+<input type="text" name="placa" id="vehiculoBorrar" size="20">
+<br>
+<br>
+<button type="button" id="btnBrr2" onclick="getBorrVehiculo();">Borrar</button> 
+</form>
+</div>
+
+
+<div id="contenedorform3">
+<form method="post" action="#">
+<h1>Borrar Infracción</h1>
+<label>Numero de infracción:</label>
+<input type="number" name="numinfra" id="infraccionBorrar" size="20">
+<br>
+
+<br>
+<button type="button" id="btnBrr3" onclick="getBorrInfraccion();">Borrar</button> 
+</form>
+</div>
+
+
+</body>
+</html>

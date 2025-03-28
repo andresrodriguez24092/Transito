@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Transito</title>
+<link rel="StyleSheet" href="estilo.css" type="text/css">
+</head>
+<body>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.4.8/p5.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.4.8/addons/p5.dom.js"></script>
+<script src="script.js"></script>
+<style>
+
+</style>
+
+<nav  id="navbar">
+    <img id="logo" src="alcaldia de medellin.png" alt="alcaldia de medellin">
+    <div id="contendorInicio">
+    <h1>ACTUALIZACION DE INFORMACIÓN TRANSITO</h1>
+    </div>
+    
+    <ul id=menu>
+        <li><a href=inicio.html>Inicio</a></li>
+        <li><a href=registrar.html>Registrar</a></li>
+        <li><a href=consultar.html>Consultar</a></li>
+        <li><a href=borrar.html>Borrar</a></li>
+    </ul>
+</nav>
+
+
+<div id="contenedorform">
+<form method="post" action="#">
+<h1>Actualizar información de Usuario</h1>
+<p>
+<label>Tipo  de Usuario:</label>
+<input type="radio" name="tipoUsuarioAct" value="empresa" checked="checked"> empresa
+<input type="radio" name="tipoUsuarioAct" value="persona"> persona
+</p>
+<label>Nombre:</label>
+<input type="text" name="nombre" id="nombreAct" size="20">
+<br>
+<br>
+<label>Identificación:</label>
+<input type="number" name="ident" id="identAct" size="20">
+<br>
+<br>
+<label>Dirección:</label>
+<input type="text" name="dir" id="dirAct" size="20">
+<br>
+<br>
+
+<button type="button" id="btnAct1" onclick="getActUsuario();">Actualizar</button> 
+</form>
+</div>
+
+
+
+<div id="contenedorform2">
+<form method="post" action="#">
+<h1>Actualizar información de vehiculo</h1>
+<label>Placa:</label>
+<input type="text" name="placa" id="placaAct" size="20">
+<br>
+<br>
+<label>Identificacion usuario:</label>
+<input type="number" name="ident_vehiculo" id="idVehiculoAct" size="20">
+<br>
+<br>
+<label>marca:</label>
+<input type="text" name="mar" id="marcaAct" size="20">
+<br>
+
+<p>
+<label>Tipo  de Vehiculo:</label>
+<input type="radio" name="tipoVehiculoAct" value="automovil" checked="checked"> automovil
+<input type="radio" name="tipoVehiculoAct" value="moto"> moto
+<br>
+<input type="radio" name="tipoVehiculoAct" value="carro pesado"> carro pesado
+</p>
+<label>Fecha de matricula:</label>
+<input type="date" id="fecha3" name="fecha" size="20">
+<br>
+<br>
+<button type="button" id="btnAct2" onclick="getActVehiculo();">Actualizar</button> 
+</form>
+</div>
+
+
+<div id="contenedorform3">
+<form method="post" action="#">
+<h1>Actualizar información de Infracción</h1>
+<label>Placa del Vehiculo:</label>
+<input type="text" name="placa" id="placaInfraccionAct" size="20">
+<br>
+
+<p>
+<label>Tipo  de Infracción:</label>
+<input type="radio" name="tipoInfraccionAct" value="camara" checked="checked"> camara
+<input type="radio" name="tipoInfraccionAct" value="agente"> agente
+</p>
+<label>Fecha de Infracción:</label>
+<input type="date" id="fecha4" name="fecha" size="20">
+<br>
+<br>
+<button type="button" id="btnAct3" onclick="getActInfraccion();">Actualizar</button> 
+</form>
+</div>
+
+
+
+
+</body>
+</html>
