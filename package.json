@@ -1,0 +1,26 @@
+{
+  "dependencies": {
+    "apollo-server": "^3.13.0",
+    "dotenv": "^16.4.7",
+    "graphql": "^16.10.0",
+    "mysql2": "^3.14.0"
+  },
+  "name": "transito",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andresrodriguez24092/Transito.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andresrodriguez24092/Transito/issues"
+  },
+  "homepage": "https://github.com/andresrodriguez24092/Transito#readme",
+  "description": ""
+}

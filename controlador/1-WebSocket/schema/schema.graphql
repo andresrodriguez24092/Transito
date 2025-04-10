@@ -1,0 +1,94 @@
+# schema.graphqlgit
+
+type Propietario {
+  identificacion: ID!
+  tipoUsuario: String!
+  nombre: String!
+  direccion: String!
+  vehiculos: [Vehiculo!]!
+}
+
+type Vehiculo {
+  placa: ID!
+  id_usuarios: ID!
+  marca: String!
+  fecha_matricula: String!
+  tipoVehiculo: String!
+  propietario: Propietario!
+  infracciones: [Infraccion!]!
+}
+
+type Infraccion {
+  numeroinfraccion: ID!
+  placa_vehiculo: String!
+  registradoPor: String!
+  fecha: String!
+  vehiculo: Vehiculo!
+}
+
+type Query {
+  # Consultas para propietarios
+  propietarios: [Propietario!]!
+  propietarioPorIdentificacion(identificacion: ID!): Propietario
+  
+  # Consultas para vehículos
+  vehiculos: [Vehiculo!]!
+  vehiculoPorPlaca(placa: ID!): Vehiculo
+  
+  # Consultas para infracciones
+  infracciones: [Infraccion!]!
+  infraccionPorNumero(numeroinfraccion: ID!): Infraccion
+  infraccionesPorVehiculo(placa: ID!): [Infraccion!]!
+}
+
+type Mutation {
+  # Mutaciones para propietarios
+  registrarPropietario(
+    identificacion: ID!
+    tipoUsuario: String!
+    nombre: String!
+    direccion: String!
+  ): Propietario!
+  
+  actualizarPropietario(
+    identificacion: ID!
+    tipoUsuario: String
+    nombre: String
+    direccion: String
+  ): Propietario!
+  
+  eliminarPropietario(identificacion: ID!): Boolean!
+
+  # Mutaciones para vehículos
+  registrarVehiculo(
+    placa: ID!
+    id_usuarios: ID!
+    marca: String!
+    fecha_matricula: String!
+    tipoVehiculo: String!
+  ): Vehiculo!
+  
+  actualizarVehiculo(
+    placa: ID!
+    marca: String
+    fecha_matricula: String
+    tipoVehiculo: String
+  ): Vehiculo!
+  
+  eliminarVehiculo(placa: ID!): Boolean!
+  
+  # Mutaciones para infracciones
+  registrarInfraccion(
+    placa_vehiculo: ID!
+    registradoPor: String!
+    fecha: String!
+  ): Infraccion!
+  
+  actualizarInfraccion(
+    numeroinfraccion: ID!
+    registradoPor: String
+    fecha: String
+  ): Infraccion!
+  
+  eliminarInfraccion(numeroinfraccion: ID!): Boolean!
+}
